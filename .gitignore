@@ -1,0 +1,64 @@
+*.DS_Store
+
+## CocoaPods GitIgnore Template
+
+Pods/
+
+# added for Xcode Cloud
+##*.xcworkspace
+
+## User settings
+xcuserdata/
+
+## Obj-C/Swift specific
+*.hmap
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+Packages/
+Package.pins
+
+# added for Xcode Cloud
+# Package.resolved
+
+#*.xcodeproj
+
+# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
+# hence it is not needed unless you have added a package configuration file to your project
+.swiftpm
+
+.build/
+
+# Carthage
+
+
+
+# Carthage/Build/
+
+# Accio dependency management
+Dependencies/
+.accio/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+iOSInjectionProject/
+
+
+### SwiftPackageManager ###
+Packages
+xcuserdata
+#*.xcodeproj
