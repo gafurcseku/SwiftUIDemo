@@ -1,0 +1,6 @@
+framework module Pods_NextRootDemoTests {
+  umbrella header "Pods-NextRootDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
