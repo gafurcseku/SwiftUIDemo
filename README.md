@@ -1,4 +1,4 @@
-# Login Flow SwiftUI Mobile App
+# Login Flow SwiftUI Mobile App Demo
 
 This repository contains a sample SwiftUI mobile app with a login flow. The app demonstrates how to implement a login screen and perform UI testing using the UITest framework in Xcode.
 
