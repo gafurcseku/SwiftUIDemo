@@ -225,9 +225,7 @@ final class UserLoginScreen {
         
         UserLoginScreen.textEditors.secureTextEditor.tap()
         UserLoginScreen.textEditors.secureTextEditor.typeText("")
-        
-       // XCUIApplication().keyboards.buttons["Return"].tap()
-        
+            
         UserLoginScreen.buttons.loginButton.tap()
         
     }
