@@ -261,3 +261,7 @@ final class UserLoginScreen {
     }
 }
 ```
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open a pull request or create an issue.
