@@ -9,6 +9,10 @@ import XCTest
 
 final class UserLoginScreen {
     
+    static let userName = "nextRo"
+    static let password = "A123456!a"
+    static let wrongPassword = "A123486!a"
+   
     struct Texts{
         let userNameText:XCUIElement
         let passwordText:XCUIElement
@@ -43,37 +47,71 @@ final class UserLoginScreen {
         loginButton: XCUIApplication().buttons["loginButton"]
     )
     
-    static func LoginTest(){
+    static func loginWithValidUsernameAndPassword(){
         UserLoginScreen.textEditors.userNameTextEditor.tap()
-        UserLoginScreen.textEditors.userNameTextEditor.typeText("nextRo")
+        UserLoginScreen.textEditors.userNameTextEditor.typeText(userName)
         
         UserLoginScreen.textEditors.secureTextEditor.tap()
-        UserLoginScreen.textEditors.secureTextEditor.typeText("123456")
+        UserLoginScreen.textEditors.secureTextEditor.typeText(password)
         
         XCUIApplication().keyboards.buttons["Return"].tap()
         
         UserLoginScreen.buttons.loginButton.tap()
     }
     
-    static func LoginTestWrong(){
+    static func loginWithInvalidUsernameAndPassword(){
         UserLoginScreen.textEditors.userNameTextEditor.tap()
-        UserLoginScreen.textEditors.userNameTextEditor.typeText("NextRo")
+        UserLoginScreen.textEditors.userNameTextEditor.typeText(userName)
         
         UserLoginScreen.textEditors.secureTextEditor.tap()
-        UserLoginScreen.textEditors.secureTextEditor.typeText("12345")
+        UserLoginScreen.textEditors.secureTextEditor.typeText(wrongPassword)
         
         XCUIApplication().keyboards.buttons["Return"].tap()
         
         UserLoginScreen.buttons.loginButton.tap()
+    }
+    
+    static func loginWithblankUsernameAndPassword(){
+        
+        UserLoginScreen.textEditors.userNameTextEditor.tap()
+        UserLoginScreen.textEditors.userNameTextEditor.typeText("")
+        
+        UserLoginScreen.textEditors.secureTextEditor.tap()
+        UserLoginScreen.textEditors.secureTextEditor.typeText("")
+        
+       // XCUIApplication().keyboards.buttons["Return"].tap()
+        
+        UserLoginScreen.buttons.loginButton.tap()
+        
+    }
+    
+    static func invalidLoginMessage(){
+        
+        UserLoginScreen.textEditors.userNameTextEditor.tap()
+        UserLoginScreen.textEditors.userNameTextEditor.typeText(userName)
+        
+        UserLoginScreen.textEditors.secureTextEditor.tap()
+        UserLoginScreen.textEditors.secureTextEditor.typeText(wrongPassword)
+        
+        XCUIApplication().keyboards.buttons["Return"].tap()
+        
+        UserLoginScreen.buttons.loginButton.tap()
+        
+    }
+    
+    static func checkPasswordVisible(){
+        UserLoginScreen.textEditors.secureTextEditor.tap()
+        UserLoginScreen.textEditors.secureTextEditor.typeText(password)
+        UserLoginScreen.buttons.passToggleButton.tap()
     }
     
     static func testUserName(){
         UserLoginScreen.textEditors.userNameTextEditor.tap()
-        UserLoginScreen.textEditors.userNameTextEditor.typeText("nextRo")
+        UserLoginScreen.textEditors.userNameTextEditor.typeText(userName)
     }
     
     static func testPassword(){
         UserLoginScreen.textEditors.secureTextEditor.tap()
-        UserLoginScreen.textEditors.secureTextEditor.typeText("123456")
+        UserLoginScreen.textEditors.secureTextEditor.typeText(password)
     }
 }

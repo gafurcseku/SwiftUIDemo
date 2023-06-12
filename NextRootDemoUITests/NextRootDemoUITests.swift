@@ -11,11 +11,9 @@ final class NextRootDemoUITests: XCTestCase {
     let app = XCUIApplication()
    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
         continueAfterFailure = false
         app.launch()
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
     }
 
     override func tearDownWithError() throws {
@@ -48,21 +46,35 @@ final class NextRootDemoUITests: XCTestCase {
         XCTAssert(userLoginButon.exists)
     }
 
-    func testUserLogin() throws {
-        UserLoginScreen.LoginTest()
+    func testLoginWithValidUsernameAndPassword() throws {
+        UserLoginScreen.loginWithValidUsernameAndPassword()
         XCTAssert(UserLoginScreen.texts.welcomeText.waitForExistence(timeout: 5.0))
+        let message = UserLoginScreen.texts.welcomeText.label
+        XCTAssertEqual("Hi \(UserLoginScreen.userName), Welcome to Application", message)
     }
     
-    func testUserLoginFail() throws {
-        UserLoginScreen.LoginTestWrong()
-        XCTAssertFalse(UserLoginScreen.texts.welcomeText.waitForExistence(timeout: 10.0))
+    func testLoginWithInvalidUsernameAndPassword() throws {
+        UserLoginScreen.loginWithInvalidUsernameAndPassword()
+        XCTAssertFalse(UserLoginScreen.texts.welcomeText.waitForExistence(timeout: 5.0))
     }
     
-    func testUserLoginFailAlert() throws {
-        UserLoginScreen.LoginTestWrong()
+    func testInvalidLoginMessage() throws {
+        UserLoginScreen.invalidLoginMessage()
         XCTAssert(app.alerts.element.waitForExistence(timeout: 5.0))
         app.alerts.element.buttons["Ok"].tap()
         XCTAssertFalse(app.alerts.element.exists)
+    }
+    
+    func testLoginWithblankUsernameAndPassword() throws {
+        UserLoginScreen.loginWithblankUsernameAndPassword()
+        XCTAssert(app.alerts.element.waitForExistence(timeout: 5.0))
+        app.alerts.element.buttons["Ok"].tap()
+        XCTAssertFalse(app.alerts.element.exists)
+    }
+    
+    func testcheckPasswordVisible() throws {
+        UserLoginScreen.checkPasswordVisible()
+        XCTAssert(UserLoginScreen.textEditors.passwordTextEditor.exists)
     }
     
     func testUserName() throws {

@@ -14,9 +14,6 @@
 		099B15162A34B19C00A5A381 /* NextRootDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B15152A34B19C00A5A381 /* NextRootDemoTests.swift */; };
 		099B15202A34B19C00A5A381 /* NextRootDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B151F2A34B19C00A5A381 /* NextRootDemoUITests.swift */; };
 		099B15222A34B19C00A5A381 /* NextRootDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B15212A34B19C00A5A381 /* NextRootDemoUITestsLaunchTests.swift */; };
-		099B15332A34B35600A5A381 /* TextEditorWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B15322A34B35600A5A381 /* TextEditorWithPlaceholder.swift */; };
-		099B15342A34B35600A5A381 /* TextEditorWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B15322A34B35600A5A381 /* TextEditorWithPlaceholder.swift */; };
-		099B15352A34B35600A5A381 /* TextEditorWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B15322A34B35600A5A381 /* TextEditorWithPlaceholder.swift */; };
 		099B15372A34C02F00A5A381 /* UserLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B15362A34C02F00A5A381 /* UserLoginViewModel.swift */; };
 		099B15382A34C02F00A5A381 /* UserLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B15362A34C02F00A5A381 /* UserLoginViewModel.swift */; };
 		099B15392A34C02F00A5A381 /* UserLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B15362A34C02F00A5A381 /* UserLoginViewModel.swift */; };
@@ -30,6 +27,9 @@
 		099B154A2A35823100A5A381 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099B15472A35823100A5A381 /* GoogleService-Info.plist */; };
 		099B154C2A35B30500A5A381 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 099B154B2A35B30500A5A381 /* FirebaseAuth */; };
 		099B154E2A35B43500A5A381 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 099B154D2A35B43500A5A381 /* FirebaseFirestore */; };
+		09C696472A36BB3100726E4E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C696462A36BB3100726E4E /* Helper.swift */; };
+		09C696482A36BE4000726E4E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C696462A36BB3100726E4E /* Helper.swift */; };
+		09C696492A36BE4100726E4E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C696462A36BB3100726E4E /* Helper.swift */; };
 		46CAA5B39233E3A6432DDEE6 /* Pods_NextRootDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7B077110D2937D8726ECFD /* Pods_NextRootDemo.framework */; };
 		5D61FD4A8882DA8E078BC0B4 /* Pods_NextRootDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDFB7D7DA345CD1BE214D5E /* Pods_NextRootDemoTests.framework */; };
 		6F0C319BA7AC1B0BB08E01DD /* Pods_NextRootDemo_NextRootDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522313DEBA6BF4FFBDFC812E /* Pods_NextRootDemo_NextRootDemoUITests.framework */; };
@@ -64,11 +64,11 @@
 		099B151B2A34B19C00A5A381 /* NextRootDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextRootDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		099B151F2A34B19C00A5A381 /* NextRootDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRootDemoUITests.swift; sourceTree = "<group>"; };
 		099B15212A34B19C00A5A381 /* NextRootDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRootDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		099B15322A34B35600A5A381 /* TextEditorWithPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEditorWithPlaceholder.swift; sourceTree = "<group>"; };
 		099B15362A34C02F00A5A381 /* UserLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewModel.swift; sourceTree = "<group>"; };
 		099B153A2A34C66E00A5A381 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		099B15422A35643800A5A381 /* UserLoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginScreen.swift; sourceTree = "<group>"; };
 		099B15472A35823100A5A381 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		09C696462A36BB3100726E4E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		2EDFB7D7DA345CD1BE214D5E /* Pods_NextRootDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextRootDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		522313DEBA6BF4FFBDFC812E /* Pods_NextRootDemo_NextRootDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextRootDemo_NextRootDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		560094833E1D4061688409C0 /* Pods-NextRootDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextRootDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-NextRootDemoTests/Pods-NextRootDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		099B152E2A34B30B00A5A381 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				099B15312A34B32E00A5A381 /* CustomView */,
+				09C696452A36BB2500726E4E /* Helper */,
 				099B15302A34B32200A5A381 /* ViewModel */,
 				099B152F2A34B31900A5A381 /* View */,
 			);
@@ -197,12 +197,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		099B15312A34B32E00A5A381 /* CustomView */ = {
+		09C696452A36BB2500726E4E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				099B15322A34B35600A5A381 /* TextEditorWithPlaceholder.swift */,
+				09C696462A36BB3100726E4E /* Helper.swift */,
 			);
-			path = CustomView;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		1DD75E0CDBCF4587513BC71D /* Frameworks */ = {
@@ -482,8 +482,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				099B153B2A34C66E00A5A381 /* WelcomeView.swift in Sources */,
-				099B15332A34B35600A5A381 /* TextEditorWithPlaceholder.swift in Sources */,
 				099B15072A34B19A00A5A381 /* UserLoginView.swift in Sources */,
+				09C696472A36BB3100726E4E /* Helper.swift in Sources */,
 				099B15052A34B19A00A5A381 /* NextRootDemoApp.swift in Sources */,
 				099B15372A34C02F00A5A381 /* UserLoginViewModel.swift in Sources */,
 			);
@@ -495,8 +495,8 @@
 			files = (
 				099B15162A34B19C00A5A381 /* NextRootDemoTests.swift in Sources */,
 				099B15382A34C02F00A5A381 /* UserLoginViewModel.swift in Sources */,
-				099B15342A34B35600A5A381 /* TextEditorWithPlaceholder.swift in Sources */,
 				099B153C2A34C66E00A5A381 /* WelcomeView.swift in Sources */,
+				09C696482A36BE4000726E4E /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,11 +505,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				099B153D2A34C66E00A5A381 /* WelcomeView.swift in Sources */,
-				099B15352A34B35600A5A381 /* TextEditorWithPlaceholder.swift in Sources */,
 				099B15222A34B19C00A5A381 /* NextRootDemoUITestsLaunchTests.swift in Sources */,
 				099B15202A34B19C00A5A381 /* NextRootDemoUITests.swift in Sources */,
 				099B15432A35643800A5A381 /* UserLoginScreen.swift in Sources */,
 				099B15392A34C02F00A5A381 /* UserLoginViewModel.swift in Sources */,
+				09C696492A36BE4100726E4E /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

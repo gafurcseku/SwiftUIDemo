@@ -13,7 +13,7 @@ struct WelcomeView: View {
             Spacer()
             HStack{
                 Spacer()
-                Text("Welcome to Application UserDashBoard").font(.system(size: 18)).foregroundColor(Color.black)
+                Text("Hi \(Helper.getUserName), Welcome to Application").font(.system(size: 18)).foregroundColor(Color.black)
                     .accessibilityIdentifier("welcomeLabel")
                 Spacer()
             }
