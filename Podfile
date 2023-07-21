@@ -6,6 +6,7 @@ target 'NextRootDemo' do
   use_frameworks!
   
   pod 'Introspect'
+  pod 'Alamofire'
 
   # Pods for NextRootDemo
 

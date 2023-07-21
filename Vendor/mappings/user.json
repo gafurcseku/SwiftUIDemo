@@ -1,0 +1,18 @@
+{
+  "request": {
+      "method": "GET",
+      "url": "/rootnext/api/user?userName=nextRo&password=A123456!a",
+      "queryParameters": {
+        "userName": {
+            "equalTo": "nextRo"
+        },
+        "password":{
+          "equalTo": "A123456!a"
+        }
+    }
+  },
+  "response": {
+      "status": 200,
+      "bodyFileName": "user.json"
+  }
+}

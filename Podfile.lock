@@ -1,16 +1,20 @@
 PODS:
-  - Introspect (0.6.0)
+  - Alamofire (5.7.1)
+  - Introspect (0.10.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Introspect
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Introspect
 
 SPEC CHECKSUMS:
-  Introspect: 59378bd7e1774f0327244ad2d06b1b9c805cb9ed
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  Introspect: b9615b6f56e9526062ada67bfeb75d262d8de8b6
 
-PODFILE CHECKSUM: dec658527f1df63a427e1159f70c359a91dfb953
+PODFILE CHECKSUM: a6cc40523b8a716fbeb3512697ed6997e3832a9b
 
 COCOAPODS: 1.12.1

@@ -7,6 +7,7 @@
 import Foundation
 import FirebaseCore
 import FirebaseFirestore
+import Alamofire
 
 
 class UserLoginViewModel : ObservableObject {
@@ -23,26 +24,44 @@ class UserLoginViewModel : ObservableObject {
             complete("Password at least 8-20 characters with special character and upper & lowercase alphabet",false)
         }
         if(done){
-            db.collection("users").whereField("password",isEqualTo: password).whereField("userName",isEqualTo: userName).getDocuments { (querySnapshot, err) in
-                if let err = err {
-                    complete("Error for Login: \(err)",false)
-                } else {
-                    if let querySnapshot = querySnapshot {
-                        if(querySnapshot.count > 0){
-                            let data = querySnapshot.documents[0].data()
-                            let userName = data["userName"] as? String ?? ""
+            if Helper.shouldRunLocal() {
+                AF.request("http://localhost:9999/rootnext/api/user?userName=\(userName)&password=\(password)").validate().responseDecodable(of: UserModel.self) { (response) in
+                    switch response.result {
+                    case .success( let data):
+                        if let user = data.users {
+                            let userName = user[0].userName ?? ""
                             Helper.setuserName(to: userName)
                             complete("Login Ok",true)
-                        }else{
-                            complete("User Login fail. Please check userName and Password",false)
                         }
+                    case .failure(let error):
+                        complete("User Login fail. with error \(error.localizedDescription)",false)
                     }
-                    for document in querySnapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
-                    }
+                   
                 }
                 
+            }else{
+                db.collection("users").whereField("password",isEqualTo: password).whereField("userName",isEqualTo: userName).getDocuments { (querySnapshot, err) in
+                    if let err = err {
+                        complete("Error for Login: \(err)",false)
+                    } else {
+                        if let querySnapshot = querySnapshot {
+                            if(querySnapshot.count > 0){
+                                let data = querySnapshot.documents[0].data()
+                                let userName = data["userName"] as? String ?? ""
+                                Helper.setuserName(to: userName)
+                                complete("Login Ok",true)
+                            }else{
+                                complete("User Login fail. Please check userName and Password",false)
+                            }
+                        }
+                        for document in querySnapshot!.documents {
+                            print("\(document.documentID) => \(document.data())")
+                        }
+                    }
+                    
+                }
             }
+            
         }
     }
     

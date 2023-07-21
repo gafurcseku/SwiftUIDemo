@@ -17,4 +17,8 @@ struct Helper {
         UserDefaults.standard.set(userName, forKey: "UserName")
         UserDefaults.standard.synchronize()
     }
+    
+    static func shouldRunLocal() -> Bool {
+        return CommandLine.arguments.contains("-runlocal")
+      }
 }

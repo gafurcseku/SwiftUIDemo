@@ -33,6 +33,12 @@
 		46CAA5B39233E3A6432DDEE6 /* Pods_NextRootDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7B077110D2937D8726ECFD /* Pods_NextRootDemo.framework */; };
 		5D61FD4A8882DA8E078BC0B4 /* Pods_NextRootDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDFB7D7DA345CD1BE214D5E /* Pods_NextRootDemoTests.framework */; };
 		6F0C319BA7AC1B0BB08E01DD /* Pods_NextRootDemo_NextRootDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522313DEBA6BF4FFBDFC812E /* Pods_NextRootDemo_NextRootDemoUITests.framework */; };
+		BCD598962A6AACDA004561D3 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD598952A6AACDA004561D3 /* Users.swift */; };
+		BCD598972A6AACDA004561D3 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD598952A6AACDA004561D3 /* Users.swift */; };
+		BCD598982A6AACDA004561D3 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD598952A6AACDA004561D3 /* Users.swift */; };
+		BCD5989A2A6AAE44004561D3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD598992A6AAE44004561D3 /* UserModel.swift */; };
+		BCD5989B2A6AAE44004561D3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD598992A6AAE44004561D3 /* UserModel.swift */; };
+		BCD5989C2A6AAE44004561D3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD598992A6AAE44004561D3 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +82,9 @@
 		71A5EDC0EEE2DF5D2A5B345E /* Pods-NextRootDemo-NextRootDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextRootDemo-NextRootDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-NextRootDemo-NextRootDemoUITests/Pods-NextRootDemo-NextRootDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		835790143D432B2468135A35 /* Pods-NextRootDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextRootDemo.release.xcconfig"; path = "Target Support Files/Pods-NextRootDemo/Pods-NextRootDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9EB09F1BBE06A5412F8E8CDA /* Pods-NextRootDemo-NextRootDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextRootDemo-NextRootDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-NextRootDemo-NextRootDemoUITests/Pods-NextRootDemo-NextRootDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BCD598942A6A9994004561D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BCD598952A6AACDA004561D3 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		BCD598992A6AAE44004561D3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		DC7B077110D2937D8726ECFD /* Pods_NextRootDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextRootDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +144,7 @@
 		099B15032A34B19A00A5A381 /* NextRootDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BCD598942A6A9994004561D3 /* Info.plist */,
 				099B15472A35823100A5A381 /* GoogleService-Info.plist */,
 				099B152E2A34B30B00A5A381 /* Application */,
 				099B15042A34B19A00A5A381 /* NextRootDemoApp.swift */,
@@ -193,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				099B15362A34C02F00A5A381 /* UserLoginViewModel.swift */,
+				BCD598952A6AACDA004561D3 /* Users.swift */,
+				BCD598992A6AAE44004561D3 /* UserModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -482,9 +494,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				099B153B2A34C66E00A5A381 /* WelcomeView.swift in Sources */,
+				BCD5989A2A6AAE44004561D3 /* UserModel.swift in Sources */,
 				099B15072A34B19A00A5A381 /* UserLoginView.swift in Sources */,
 				09C696472A36BB3100726E4E /* Helper.swift in Sources */,
 				099B15052A34B19A00A5A381 /* NextRootDemoApp.swift in Sources */,
+				BCD598962A6AACDA004561D3 /* Users.swift in Sources */,
 				099B15372A34C02F00A5A381 /* UserLoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,7 +509,9 @@
 			files = (
 				099B15162A34B19C00A5A381 /* NextRootDemoTests.swift in Sources */,
 				099B15382A34C02F00A5A381 /* UserLoginViewModel.swift in Sources */,
+				BCD598972A6AACDA004561D3 /* Users.swift in Sources */,
 				099B153C2A34C66E00A5A381 /* WelcomeView.swift in Sources */,
+				BCD5989B2A6AAE44004561D3 /* UserModel.swift in Sources */,
 				09C696482A36BE4000726E4E /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,10 +522,12 @@
 			files = (
 				099B153D2A34C66E00A5A381 /* WelcomeView.swift in Sources */,
 				099B15222A34B19C00A5A381 /* NextRootDemoUITestsLaunchTests.swift in Sources */,
+				BCD5989C2A6AAE44004561D3 /* UserModel.swift in Sources */,
 				099B15202A34B19C00A5A381 /* NextRootDemoUITests.swift in Sources */,
 				099B15432A35643800A5A381 /* UserLoginScreen.swift in Sources */,
 				099B15392A34C02F00A5A381 /* UserLoginViewModel.swift in Sources */,
 				09C696492A36BE4100726E4E /* Helper.swift in Sources */,
+				BCD598982A6AACDA004561D3 /* Users.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +672,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NextRootDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NextRootDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -683,6 +702,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NextRootDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NextRootDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
