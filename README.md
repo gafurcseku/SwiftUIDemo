@@ -53,7 +53,7 @@ This repository contains a demonstration of test HTTP requests using WireMock cl
 
 **Run the following command to start the WireMock server on port 8080**
 
-``` java -jar wiremock.jar --port 9999 --verbose ```
+``` java -jar wiremock.jar --port 8080 --verbose ```
 
 ## UITest Code
 
