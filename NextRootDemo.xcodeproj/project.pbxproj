@@ -39,6 +39,9 @@
 		BCD5989A2A6AAE44004561D3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD598992A6AAE44004561D3 /* UserModel.swift */; };
 		BCD5989B2A6AAE44004561D3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD598992A6AAE44004561D3 /* UserModel.swift */; };
 		BCD5989C2A6AAE44004561D3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD598992A6AAE44004561D3 /* UserModel.swift */; };
+		BCD5989E2A6E7692004561D3 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = BCD5989D2A6E7692004561D3 /* user.json */; };
+		BCD5989F2A6E7692004561D3 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = BCD5989D2A6E7692004561D3 /* user.json */; };
+		BCD598A02A6E7692004561D3 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = BCD5989D2A6E7692004561D3 /* user.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,7 @@
 		BCD598942A6A9994004561D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BCD598952A6AACDA004561D3 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		BCD598992A6AAE44004561D3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BCD5989D2A6E7692004561D3 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = user.json; path = Vendor/__files/user.json; sourceTree = SOURCE_ROOT; };
 		DC7B077110D2937D8726ECFD /* Pods_NextRootDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextRootDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 		099B15032A34B19A00A5A381 /* NextRootDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BCD5989D2A6E7692004561D3 /* user.json */,
 				BCD598942A6A9994004561D3 /* Info.plist */,
 				099B15472A35823100A5A381 /* GoogleService-Info.plist */,
 				099B152E2A34B30B00A5A381 /* Application */,
@@ -361,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD5989E2A6E7692004561D3 /* user.json in Resources */,
 				099B150C2A34B19B00A5A381 /* Preview Assets.xcassets in Resources */,
 				099B15092A34B19B00A5A381 /* Assets.xcassets in Resources */,
 				099B15482A35823100A5A381 /* GoogleService-Info.plist in Resources */,
@@ -371,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD5989F2A6E7692004561D3 /* user.json in Resources */,
 				099B15492A35823100A5A381 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD598A02A6E7692004561D3 /* user.json in Resources */,
 				099B154A2A35823100A5A381 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

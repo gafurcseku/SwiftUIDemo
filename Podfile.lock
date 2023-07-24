@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.7.1)
   - Introspect (0.10.0)
+  - WiremockClient (3.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - Introspect
+  - WiremockClient
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Introspect
+    - WiremockClient
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   Introspect: b9615b6f56e9526062ada67bfeb75d262d8de8b6
+  WiremockClient: 3cda70e10b336a0b0b3713eaf33973f1780d5472
 
-PODFILE CHECKSUM: a6cc40523b8a716fbeb3512697ed6997e3832a9b
+PODFILE CHECKSUM: 0fdc81c4ae89834c6cd6817c93793a39125c2497
 
 COCOAPODS: 1.12.1

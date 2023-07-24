@@ -8,6 +8,7 @@ import Foundation
 import FirebaseCore
 import FirebaseFirestore
 import Alamofire
+import WiremockClient
 
 
 class UserLoginViewModel : ObservableObject {
@@ -25,7 +26,12 @@ class UserLoginViewModel : ObservableObject {
         }
         if(done){
             if Helper.shouldRunLocal() {
-                AF.request("http://localhost:9999/rootnext/api/user?userName=\(userName)&password=\(password)").validate().responseDecodable(of: UserModel.self) { (response) in
+                let parameters: Parameters = [
+                        "userName": userName,
+                        "password":password
+                        ]
+                AF.request("\(WiremockClient.baseURL)/rootnext/api/user",method: .get,parameters: parameters).validate().responseDecodable(of: UserModel.self) { (response) in
+                    print(response)
                     switch response.result {
                     case .success( let data):
                         if let user = data.users {

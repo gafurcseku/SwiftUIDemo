@@ -6,17 +6,25 @@
 //
 
 import XCTest
+import WiremockClient
 
 final class NextRootDemoUITests: XCTestCase {
     let app = XCUIApplication()
    
     override func setUpWithError() throws {
+       
+        try WiremockClient.postMapping(stubMapping: StubMapping.stubFor(requestMethod: .GET, urlMatchCondition: .urlPathEqualTo, url: "/rootnext/api/user").withQueryParam("userName", matchCondition: .equalTo, value: "nextRo").withQueryParam("password", matchCondition: .equalTo, value: "A123456!a")
+            .willReturn(ResponseDefinition().withLocalJsonBodyFile("user", in: Bundle(for: type(of: self))))
+        )
+        
         continueAfterFailure = false
+        app.launchArguments.append(contentsOf: ["-runlocal"])
         app.launch()
         
     }
 
     override func tearDownWithError() throws {
+      // try WiremockClient.reset()
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
@@ -47,6 +55,13 @@ final class NextRootDemoUITests: XCTestCase {
     }
 
     func testLoginWithValidUsernameAndPassword() throws {
+        UserLoginScreen.loginWithValidUsernameAndPassword()
+        XCTAssert(UserLoginScreen.texts.welcomeText.waitForExistence(timeout: 5.0))
+        let message = UserLoginScreen.texts.welcomeText.label
+        XCTAssertEqual("Hi \(UserLoginScreen.userName), Welcome to Application", message)
+    }
+    
+    func testLogin_With_Valid_UserName_And_Password_Via_WireMoc() throws {
         UserLoginScreen.loginWithValidUsernameAndPassword()
         XCTAssert(UserLoginScreen.texts.welcomeText.waitForExistence(timeout: 5.0))
         let message = UserLoginScreen.texts.welcomeText.label

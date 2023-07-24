@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-NextRootDemo/Pods-NextRootDemo-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/Introspect/Introspect.framework
+${BUILT_PRODUCTS_DIR}/WiremockClient/WiremockClient.framework

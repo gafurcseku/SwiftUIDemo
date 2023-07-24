@@ -7,6 +7,7 @@ target 'NextRootDemo' do
   
   pod 'Introspect'
   pod 'Alamofire'
+  pod "WiremockClient"
 
   # Pods for NextRootDemo
 
