@@ -35,6 +35,26 @@ This repository contains a sample SwiftUI mobile app with a login flow. The app 
 4. If the login is successful, you will be redirected to the main screen.
 5. If the login fails, an error message will be displayed.
 
+## HTTP Request Test via WireMock Client
+
+This repository contains a demonstration of test HTTP requests using WireMock client in setup. WireMock is a powerful library that allows you to mock HTTP services for testing purposes, enabling you to write robust and reliable tests for your HTTP client code.
+
+## Prerequisites
+
+**Before running the tests, make sure you have the following software installed:**
+
+- Java Development Kit (JDK) 8 or later
+- Maven (optional, for building the project)
+
+## Start the WireMock server
+
+1. First go the project root directory
+2. Then go to the subdirectory **Vendor**
+
+**Run the following command to start the WireMock server on port 8080**
+
+``` java -jar wiremock.jar --port 9999 --verbose ```
+
 ## UITest Code
 
 The `NextRootDemoUITests` target contains the UI tests for the login flow. Here's an example of the UITest code to validate the login process:
@@ -46,6 +66,12 @@ final class NextRootDemoUITests: XCTestCase {
     let app = XCUIApplication()
    
     override func setUpWithError() throws {
+
+        try WiremockClient.postMapping(stubMapping: StubMapping.stubFor(requestMethod: .GET, urlMatchCondition: .urlPathEqualTo, url: "/rootnext/api/user").withQueryParam("userName", matchCondition: .equalTo, value: "nextRo").withQueryParam("password", matchCondition: .equalTo, value: "A123456!a")
+            .willReturn(ResponseDefinition().withLocalJsonBodyFile("user", in: Bundle(for: type(of: self))))
+        )
+        
+        app.launchArguments.append(contentsOf: ["-runlocal"])
         continueAfterFailure = false
         app.launch()
         
@@ -82,6 +108,13 @@ final class NextRootDemoUITests: XCTestCase {
     }
 
     func testLoginWithValidUsernameAndPassword() throws {
+        UserLoginScreen.loginWithValidUsernameAndPassword()
+        XCTAssert(UserLoginScreen.texts.welcomeText.waitForExistence(timeout: 5.0))
+        let message = UserLoginScreen.texts.welcomeText.label
+        XCTAssertEqual("Hi \(UserLoginScreen.userName), Welcome to Application", message)
+    }
+
+    func testLogin_With_Valid_UserName_And_Password_Via_WireMoc() throws {
         UserLoginScreen.loginWithValidUsernameAndPassword()
         XCTAssert(UserLoginScreen.texts.welcomeText.waitForExistence(timeout: 5.0))
         let message = UserLoginScreen.texts.welcomeText.label
